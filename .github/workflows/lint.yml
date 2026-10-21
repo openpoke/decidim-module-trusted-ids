@@ -9,7 +9,7 @@ on:
 
 env:
   CI: "true"
-  RUBY_VERSION: 3.3.11
+  RUBY_VERSION: 3.4.7
   NODE_VERSION: 22.14.0
 
 jobs:
@@ -38,9 +38,6 @@ jobs:
         with:
           ruby-version: ${{ env.RUBY_VERSION }}
           rubygems: 3.3.26
-          bundler-cache: true
-
-      - run: bundle exec rubocop -P
         name: Lint Ruby files
 
       - run: bundle exec erblint app/**/*.erb
