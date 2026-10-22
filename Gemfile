@@ -30,6 +30,8 @@ group :development do
   gem "faker"
   gem "letter_opener_web"
   gem "listen"
+  # rack-proxy >= 1.0 rejects Shakapacker's dev server proxy requests with a 502
+  gem "rack-proxy", "~> 0.7"
   gem "rubocop-faker"
   gem "web-console"
 end
